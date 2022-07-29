@@ -1,9 +1,6 @@
-export default function MovieInfo({movie}) {
-    const {id, name} = movie;
+export default function MovieInfo() {
     return (
         <div>
-            <div>id: {id}</div>
-            <div>name: {name}</div>
         </div>
     )
 }
