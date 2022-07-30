@@ -14,8 +14,8 @@ function App() {
           <div>
               <Routes>
                   <Route path={'/'} element={<MainLayout/>}>
-                      <Route path={'/movielist'} element={<MovieList/>}></Route>
-                      <Route path={'/genrebadbe'} element={<GenreBadge/>}></Route>
+                      <Route path={'/movies'} element={<MovieList/>}></Route>
+                      <Route path={'/genres'} element={<GenreBadge/>}></Route>
                   </Route>
               </Routes>
           </div>
