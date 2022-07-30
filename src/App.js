@@ -11,7 +11,7 @@ function App() {
 
   return (
       <div>
-          <div>
+          <div className={"header"}>
               <Routes>
                   <Route path={'/'} element={<MainLayout/>}>
                       <Route path={'/movies'} element={<MovieList/>}></Route>
