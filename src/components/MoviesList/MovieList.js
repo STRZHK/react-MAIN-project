@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import {Outlet} from "react-router-dom";
 
 import MovieInfo from "../MovieInfo/MovieInfo";
 import {baseURLMovies} from "../../services";
@@ -17,6 +18,7 @@ export default function MovieList() {
 
     return (
         <div className={"container"}>
+            <Outlet/>
             <div className={"grid"}>
                 {
                     movies.map((movie)=> <MovieInfo key={movie.id} movie={movie}/>)

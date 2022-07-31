@@ -6,7 +6,6 @@ import MovieList from "./components/MoviesList/MovieList";
 import GenreBadge from "./components/GenreBadge/GenreBadge";
 import MainLayout from "./components/MainLayout/MainLayout";
 
-
 function App() {
 
   return (

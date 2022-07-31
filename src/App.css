@@ -29,6 +29,10 @@ img {
 .movieCard {
     margin: 15px;
     padding: 13px;
+    border: 1px solid rgba(197, 221, 241, 0.29);
+    background-color: rgb(184, 212, 236);
+    position: relative;
+    width: 300px;
 }
 
 .titleOfMovie {
@@ -52,4 +56,18 @@ ul {
     margin-left: 40px;
     color: #4393d9;
     font-size: 25px;
+}
+
+.movieInfo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: azure;
+    padding: 1em;
+    transform: translateX(100%);
+}
+
+.movieCard:hover .movieInfo {
+    transform: translateX(0%);
 }
