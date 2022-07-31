@@ -16,10 +16,12 @@ export default function MovieList() {
     }, [])
 
     return (
-        <div>
-            {
-                movies.map((movie)=> <MovieInfo key={movie.id} movie={movie}/>)
-            }
+        <div className={"container"}>
+            <div className={"grid"}>
+                {
+                    movies.map((movie)=> <MovieInfo key={movie.id} movie={movie}/>)
+                }
+            </div>
         </div>
     )
 }

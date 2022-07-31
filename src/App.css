@@ -1,11 +1,55 @@
-img {
-    width: 250px;
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700&display=swap");
+
+body{
+    font-family: "Source Sans Pro", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
 }
 
-.movieCard {
-    background-color: azure;
+img {
     width: 300px;
-    height: 750px;
+    height: 450px;
+}
+.container {
+    width: 100%;
+    margin: 1em auto;
+    background-color: rgba(67, 147, 217, 0.29);
+}
+
+.grid {
+    display: grid;
+    margin-left: .5px;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 0.2em;
+    justify-content: center;
+}
+.movieCard {
+    margin: 15px;
     padding: 13px;
-    margin: 17px;
+}
+
+.titleOfMovie {
+    height: 40px;
+    color: #4393d9;
+}
+
+.headerTitle {
+    font-size: 40px;
+    color: #4393d9;
+    margin-left: 50px;
+}
+
+ul {
+    font-size: 30px;
+    width: 300px;
+    color: #4393d9;
+}
+
+.genreDiv {
+    margin-left: 40px;
+    color: #4393d9;
+    font-size: 25px;
 }
