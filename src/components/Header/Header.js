@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom";
+import {Search} from "../search/search";
 
 const Header = () => {
     return (
@@ -8,6 +9,7 @@ const Header = () => {
                 <div className={"headerMovie"}><Link to={'/movies'}>Movies</Link></div>
                 <div className={"headerGenre"}><Link to={'/genres'}>Genres</Link></div>
             </ul>
+            <Search/>
         </div>
     )
 }
