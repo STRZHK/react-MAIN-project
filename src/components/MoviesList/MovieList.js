@@ -14,7 +14,8 @@ export default function MovieList() {
                 // console.log(data);
                 setMovies(data.results);
             })
-    }, [])
+    }, []);
+
 
     return (
         <div className={"container"}>

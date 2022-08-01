@@ -10,7 +10,6 @@ export default function GenreBadge() {
         fetch(baseURLGenres)
             .then((res)=>res.json())
             .then(data=>{
-                // console.log(data);
                 setGenres(data.genres);
             })
     }, [])

@@ -23,7 +23,7 @@ img {
     display: grid;
     margin-left: .5px;
     grid-template-columns: repeat(4,1fr);
-    grid-gap: 0.2em;
+    grid-gap: 0.1em;
     justify-content: center;
 }
 .movieCard {
@@ -32,7 +32,8 @@ img {
     border: 1px solid rgba(197, 221, 241, 0.29);
     background-color: rgb(184, 212, 236);
     position: relative;
-    width: 300px;
+    width: 90%;
+    border-radius: 10px;
 }
 
 .titleOfMovie {
@@ -65,9 +66,20 @@ ul {
     left: 0;
     background-color: azure;
     padding: 1em;
-    transform: translateX(100%);
+    transform: translatey(100%);
+    transition: transform 0.4s;
+    max-height: 100%;
+    border-radius: 10px;
 }
 
 .movieCard:hover .movieInfo {
-    transform: translateX(0%);
+    transform: translateY(0%);
+}
+
+.search {
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 83%;
+    background-color: transparent;
 }
