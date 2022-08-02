@@ -1,6 +1,6 @@
 import {apiImage} from "../../services";
 
-export default function MovieInfo({movie}) {
+export function MovieInfo({movie}) {
 
     const {original_title, poster_path,original_language, overview, popularity, vote_count} = movie;
 

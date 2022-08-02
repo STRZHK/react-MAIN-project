@@ -1,21 +1,20 @@
-import {useEffect, useState} from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from 'react';
 import {Outlet} from "react-router-dom";
 
-import MovieInfo from "../MovieInfo/MovieInfo";
-import {baseURLMovies} from "../../services";
+import {movieActions} from "../../redux";
+import {MovieInfo} from "../MovieInfo/MovieInfo";
 
-export default function MovieList() {
-    const [movies, setMovies] = useState([]);
+export const MoviesList = () => {
+    const dispatch = useDispatch();
+    const {movies, isLoading, serverError} = useSelector(state => state.movieReducer);
+
 
     useEffect(() => {
-        fetch(baseURLMovies)
-            .then((res)=>res.json())
-            .then(data=>{
-                // console.log(data);
-                setMovies(data.results);
-            })
-    }, []);
+        dispatch(movieActions.getMovies())
+    }, [])
 
+    console.log(movies);
 
     return (
         <div className={"container"}>
@@ -24,6 +23,9 @@ export default function MovieList() {
                 {
                     movies.map((movie)=> <MovieInfo key={movie.id} movie={movie}/>)
                 }
+                <hr/>
+                {isLoading&& <h1>Loading</h1>}
+                {serverError&& <h1>{serverError}</h1>}
             </div>
         </div>
     )

@@ -1,24 +1,25 @@
-import {useEffect, useState} from "react";
+import { useEffect } from 'react';
+import {useDispatch, useSelector} from "react-redux";
 
-import {baseURLGenres} from "../../services";
+import {genresActions} from "../../redux";
 import GenrePage from "../GenrePage/GenrePage";
 
-export default function GenreBadge() {
-    const [genres, setGenres] = useState([]);
+export const GenreBadge = () => {
+    const dispatch = useDispatch();
+    const {genres, isLoading, serverError} = useSelector(state => state.genresReducer);
 
     useEffect(() => {
-        fetch(baseURLGenres)
-            .then((res)=>res.json())
-            .then(data=>{
-                setGenres(data.genres);
-            })
-    }, [])
+        dispatch(genresActions.getGenres());
+        console.log(genres);
+    }, []);
 
-    return (
-        <div>
-            {
-                genres.map((genre)=> <GenrePage key={genre.id} genre={genre}/>)
-            }
-        </div>
-    )
+    console.log(genres);
+
+    return (<div>
+        Genres:
+        {genres.map(genre => <GenrePage key={genre.id} genre={genre}/>)}
+        <hr/>
+        {isLoading&& <h1>Loading</h1>}
+        {serverError&& <h1>{serverError}</h1>}
+    </div>)
 }
