@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from 'react';
+import {useEffect, useState} from 'react';
 import {Outlet} from "react-router-dom";
 
 import {movieActions} from "../../redux";
@@ -16,12 +16,15 @@ export const MoviesList = () => {
 
     console.log(movies);
 
+    const movieIdState = useState(null);
+
+
     return (
         <div className={"container"}>
             <Outlet/>
             <div className={"grid"}>
                 {
-                    movies.map((movie)=> <MovieInfo key={movie.id} movie={movie}/>)
+                    movies.map((movie)=> <MovieInfo key={movie.id} movie={movie} movieIdState={movieIdState}/>)
                 }
                 <hr/>
                 {isLoading&& <h1>Loading</h1>}
