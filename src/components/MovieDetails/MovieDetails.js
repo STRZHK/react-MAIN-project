@@ -4,8 +4,7 @@ export default function MovieDetails({movie}) {
 
     return (
         <div>
-                <div>
-                        {/*<p className={"popularity"}><b>Rating</b> {vote_average}</p>*/}
+                <div className={"movieInfo"}>
                         <p className={"language"}><b>Language:</b> {original_language}</p>
                         <p className={"overview"}><b>Overview:</b> {overview}</p>
                         <p className={"Voutes"}><b>Voutes:</b> {vote_count}</p>
