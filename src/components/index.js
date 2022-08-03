@@ -7,3 +7,4 @@ export * from './MoviesListCard/MovieListCard';
 export * from './StarsRating/StarsRating';
 export * from './UserInfo/UserInfo';
 export * from './MainLayout/MainLayout';
+export * from "./ButtonMore/ButtonMore"

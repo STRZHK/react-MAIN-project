@@ -5,24 +5,29 @@ import {Route, Routes} from "react-router-dom";
 import {MoviesList} from "./components";
 import {GenreBadge} from "./components";
 import MainLayout from "./components/MainLayout/MainLayout";
+import MovieDetails from "./components/MovieDetails/MovieDetails";
+import ButtonMore from "./components/ButtonMore/ButtonMore";
 
 function App() {
 
-  return (
+
+const loadmore = () => {
+
+}
+
+    return (
       <div>
-          {/*<div className={"header"}>*/}
-          {/*    <Routes>*/}
-          {/*        <Route path={'/'} element={<MainLayout/>}>*/}
-          {/*            <Route path={'/movies'} element={<MoviesList/>}></Route>*/}
-          {/*            <Route path={'/genres'} element={<GenreBadge/>}></Route>*/}
-          {/*        </Route>*/}
-          {/*    </Routes>*/}
-          {/*</div>*/}
-
-          {/*<MoviesList/>*/}
-
-          <GenreBadge/>
-          <MoviesList/>
+          <div className={"movies&genres"}>
+              <Routes>
+                  <Route path={'/'} element={<MainLayout/>}>
+                      <Route path={'/movies'} element={<MoviesList/>}>
+                          <Route path={':id'} element={<MovieDetails/>}></Route>
+                      </Route>
+                      <Route path={'/genres'} element={<GenreBadge/>}></Route>
+                  </Route>
+              </Routes>
+              <div className={"btnMoreDiv"}><button className={"btnMore"} onClick={loadmore}>More</button></div>
+          </div>
       </div>
   );
 }

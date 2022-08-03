@@ -15,8 +15,7 @@ export const GenreBadge = () => {
 
     console.log(genres);
 
-    return (<div>
-        Genres:
+    return (<div className={"genreList"}>
         {genres.map(genre => <GenrePage key={genre.id} genre={genre}/>)}
         <hr/>
         {isLoading&& <h1>Loading</h1>}
