@@ -16,6 +16,7 @@ const Header = () => {
             </div>
             <div className={"UserInfo"}><UserInfo/></div>
             <div className={"Search"}><Search/></div>
+
             <Outlet/>
         </div>
     )
