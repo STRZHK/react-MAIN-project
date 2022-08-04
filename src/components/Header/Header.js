@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import {Search} from "../search/search";
 import {Outlet} from "react-router-dom";
+import UserInfo from "../UserInfo/UserInfo";
 
 const Header = () => {
     return (
@@ -13,7 +14,8 @@ const Header = () => {
                 <div className={"headerTitle"}><Link to={'/games'}>Games</Link></div>
                 <div className={"headerTitle"}><Link to={'/apps'}>Apps</Link></div>
             </div>
-            <Search/>
+            <div className={"UserInfo"}><UserInfo/></div>
+            <div className={"Search"}><Search/></div>
             <Outlet/>
         </div>
     )

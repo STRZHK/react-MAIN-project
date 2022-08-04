@@ -3,7 +3,6 @@ import {baseURLMovies} from "../../services";
 
 const initialState = {
     movies: [],
-    genres: [],
     isLoading: false,
     serverError:null
 };
