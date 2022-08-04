@@ -1,6 +1,8 @@
+import StarsRating from "../StarsRating/StarsRating";
+
 export default function MovieDetails({movie}) {
 
-    const {original_language, overview, popularity, vote_count,vote_average} = movie;
+    const {original_language, overview, popularity, vote_count} = movie;
 
     return (
         <div>
@@ -9,6 +11,7 @@ export default function MovieDetails({movie}) {
                         <p className={"overview"}><b>Overview:</b> {overview}</p>
                         <p className={"Voutes"}><b>Voutes:</b> {vote_count}</p>
                         <p className={"popularity"}><b>Popularity:</b> {popularity}</p>
+                    <StarsRating/>
                 </div>
             </div>
     )

@@ -13,12 +13,10 @@ export const GenreBadge = () => {
         console.log(genres);
     }, []);
 
-    console.log(genres);
-
-    return (<div className={"genreList"}>
-        {genres.map(genre => <GenrePage key={genre.id} genre={genre}/>)}
-        <hr/>
-        {isLoading&& <h1>Loading</h1>}
-        {serverError&& <h1>{serverError}</h1>}
-    </div>)
+    return (
+        <div className={"genreList"}>
+            {genres.map(genre => <GenrePage key={genre.id} genre={genre}/>)}
+            {isLoading&& <h1>Loading</h1>}
+            {serverError&& <h1>{serverError}</h1>}
+        </div>)
 }
