@@ -10,7 +10,7 @@ export const MoviesList = () => {
 
 
     useEffect(() => {
-        dispatch(movieActions.getMovies())
+        dispatch(movieActions.getMovies('xyu'))
     }, [])
 
     console.log(movies);
